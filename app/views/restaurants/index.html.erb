@@ -1,0 +1,8 @@
+<h1>Restaurant List</h1>
+<%= link_to "+ add a new restaurant", new_restaurant_path %>
+
+<% @restaurants.reverse.each do |restaurant| %>
+  <ul>
+    <li><%= link_to restaurant.name, restaurant_path(restaurant.id) %></li>
+  </ul>
+<% end %>
